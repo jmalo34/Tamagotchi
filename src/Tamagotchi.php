@@ -44,8 +44,9 @@ class Tamagotchi
 
     function giveFood()
     {
-        $current_food = $this->getFood();
-        $this->setFood($current_food + 5);
+        // $current_food = $this->getFood();
+        // $this->setFood($current_food + 5);
+        $this->food++;
     }
 
     function save()

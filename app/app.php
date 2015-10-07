@@ -35,7 +35,8 @@
 
     $app->post("/feeding", function () use ($app)
     {
-        $_SESSION['list_of_pets'][0]->setFood($_SESSION['list_of_pets'][0]->getFood() +10);
+        //HOW do I write out something that only passes the chosen key to have it's respected value affected? how do i CHOOSE which session key i am using, when i am NOT CHOOSING the first key in the session array???!
+        $this->giveFood();
         return $app['twig']->render('pets.html.twig', array('pets' => Tamagotchi::getAll()));
     });
 
