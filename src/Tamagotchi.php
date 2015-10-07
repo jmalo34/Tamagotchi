@@ -2,10 +2,14 @@
 class Tamagotchi
 {
     private $name;
+    private $food;
+    private $mood;
 
-    function __construct($name)
+    function __construct($name, $food = 100, $mood = 100)
     {
         $this->name = $name;
+        $this->food = $food;
+        $this->mood = $mood;
     }
 
     function setName($new_name)
@@ -16,6 +20,26 @@ class Tamagotchi
     function getName()
     {
         return $this->name;
+    }
+
+    function setFood($new_food)
+    {
+        $this->food = (integer) $new_food;
+    }
+
+    function getFood()
+    {
+        return $this->food;
+    }
+
+    function setMood($new_mood)
+    {
+        $this->mood = $new_mood;
+    }
+
+    function getMood()
+    {
+        return $this->mood;
     }
 
     function save()

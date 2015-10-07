@@ -5,6 +5,11 @@
 <body>
     <h1>You've got a new pet!</h1>
     <p>{{ newpet.getName }}</p>
+        <ul>
+            <li>Nourishment:{{ newpet.getFood }}</li>
+            <li>Mood:{{ newpet.getMood }}</li>
+            <li>Rest Levels:{{ newpet.getRest }}</li>
+        </ul>
     <p><a href='/'>See all your pets.</a></p>
 </body>
 </html>

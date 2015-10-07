@@ -26,11 +26,17 @@
         return $app['twig']->render('create_pet.html.twig', array('newpet' => $pet));
     });
 
-    $app->post("delete_pets", function() use ($app)
+    $app->post("/delete_pets", function() use ($app)
     {
         Tamagotchi::deleteAll();
 
         return $app['twig']->render('delete_pets.html.twig');
+    });
+
+    $app->post("/feeding", function () use ($app)
+    {
+        $_SESSION['list_of_pets'][0]->setFood($_SESSION['list_of_pets'][0]->getFood() +10);
+        return $app['twig']->render('pets.html.twig', array('pets' => Tamagotchi::getAll()));
     });
 
     return $app;
