@@ -42,6 +42,12 @@ class Tamagotchi
         return $this->mood;
     }
 
+    function giveFood()
+    {
+        $current_food = $this->getFood();
+        $this->setFood($current_food + 5);
+    }
+
     function save()
     {
         array_push($_SESSION['list_of_pets'], $this);
