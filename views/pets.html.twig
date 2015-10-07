@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Tamagotchi</title>
+</head>
+<body>
+    <h1>My Tamagotchis</h1>
+    {% if pets is not empty %}
+        <p>Here is a list of all your pets:</p>
+        <ul>
+            {% for pet in pets %}
+            <li>{{ pet.getName }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form action='/pets' method='post'>
+        <label for='name'>Name</label>
+        <input id='name' name='name' type='text'>
+        <button type='submit'>New Tamagotchi!</button>
+    </form>
+    <form action='delete_pets' method='post'>
+        <button type='submit'>clear list</button>
+    </form>
+</body>
+</html>
