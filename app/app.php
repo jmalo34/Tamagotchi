@@ -33,6 +33,7 @@
         return $app['twig']->render('delete_pets.html.twig');
     });
 
+//find out how to change so these methods can work on more than the object keyed in array at 0
     $app->post("/feeding", function () use ($app)
     {
         $pet = Tamagotchi::getAll();
