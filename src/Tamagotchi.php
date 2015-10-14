@@ -24,7 +24,7 @@ class Tamagotchi
 
     function setFood($new_food)
     {
-        $this->food = (integer) $new_food;
+        $this->food = $new_food;
     }
 
     function getFood()
@@ -42,12 +42,18 @@ class Tamagotchi
         return $this->mood;
     }
 
-    function giveFood()
-    {
-        // $current_food = $this->getFood();
-        // $this->setFood($current_food + 5);
-        $this->food++;
-    }
+    // function feed ()
+    // {
+    //     $hunger = $_GET['food'];
+    //     if ($hunger != 0)
+    //     {
+    //         return $hunger + 10;
+    //     }
+    //     else
+    //     {
+    //         return "Your pet died of hunger.";
+    //     }
+    // }
 
     function save()
     {

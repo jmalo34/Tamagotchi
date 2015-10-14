@@ -4,6 +4,9 @@
 </head>
 <body>
     <h1>Feeding Time!</h1>
-    <p>{{ newpet.giveFood }}</p>
+    {% if food < 150 %}
+    {% set food = + 20) %}
+    <p>{{ pet.getFood }}</p>
+    {% endif %}
 </body>
 </html>
