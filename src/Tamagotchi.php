@@ -42,6 +42,10 @@ class Tamagotchi
         return $this->mood;
     }
 
+    function feed()
+ {
+    $this->food++;
+ }
     // function feed ()
     // {
     //     $hunger = $_GET['food'];

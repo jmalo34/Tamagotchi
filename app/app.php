@@ -35,7 +35,11 @@
 
     $app->post("/feeding", function () use ($app)
     {
-        $_SESSION['list_of_pets'][0]->setFood($_SESSION['list_of_pets'][0]->getFood() + 5);
+        $pet = Tamagotchi::getAll();
+        if (key($_POST) == "food")
+        {
+            $pet[0]->feed();
+        }
 
         return $app['twig']->render('pets.html.twig', array('pets' => Tamagotchi::getAll()));
     });

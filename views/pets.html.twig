@@ -11,7 +11,7 @@
             <h3>{{ pet.getName }}</h3>
             <ul>
                 <li>Nourishment Level: {{ pet.getFood }}<form action='feeding' method='post'>
-                    <button type='submit'>feed</button>
+                    <button name='food' type='submit'>feed</button>
                 </form></li>
                 <li>Mood: {{ pet.getMood }}<form action='feelings' method='post'>
                     <button type='submit'>play</button>
